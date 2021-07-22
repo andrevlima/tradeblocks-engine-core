@@ -1,0 +1,476 @@
+{
+	"blocks": {
+		"operators": {
+			"1525868398043": {
+				"top": 100,
+				"left": 40,
+				"hiddenConfiguration": true,
+				"properties": {
+					"title": "When price changes...",
+					"inputs": {
+						
+					},
+					"outputs": {
+						"outs": {
+							"label": "Do (:i)º",
+							"multiple": true
+						}
+					}
+				},
+				"internalCategory": "events",
+				"internalType": "OnTick",
+				"parameters": []
+			},
+			"1525868406424": {
+				"top": 100,
+				"left": 340,
+				"hiddenConfiguration": false,
+				"properties": {
+					"title": "If",
+					"inputs": {
+						"parent": {
+							"label": "Verify"
+						}
+					},
+					"outputs": {
+						"yes": {
+							"label": "If yes"
+						},
+						"no": {
+							"label": "If not"
+						},
+						"next": {
+							"label": "After"
+						}
+					}
+				},
+				"internalCategory": "controls",
+				"internalType": "CheckIf",
+				"parameters": {
+					"formula": {
+						"type": null,
+						"value": [
+							{
+								"symbolName": "biggerThan",
+								"label": "Bigger than",
+								"labelPosition": "between",
+								"type": "comparator",
+								"compareSymbol": ">",
+								"outputType": "toggle",
+								"inputs": [
+									{
+										"label": "Value",
+										"inputType": "*",
+										"value": 5092657833
+									},
+									{
+										"label": "Value",
+										"inputType": "*",
+										"value": 3087439234
+									}
+								],
+								"firstNode": true,
+								"uniqueId": 8619017606,
+								"tags": [
+									"comparator"
+								]
+							},
+							{
+								"symbolName": "getPrice",
+								"label": "Price",
+								"type": "function",
+								"outputType": "number",
+								"inputs": [
+									{
+										"label": "Symbol",
+										"inputType": "text",
+										"multiple": false,
+										"value": 8661930750,
+										"interestedTags": [
+											"symbol"
+										]
+									},
+									{
+										"label": "Time period",
+										"inputType": "number",
+										"multiple": false,
+										"value": 8053308077,
+										"interestedTags": [
+											"period"
+										]
+									},
+									{
+										"label": "Bar number",
+										"inputType": "number",
+										"multiple": false,
+										"value": 9948875831,
+										"interestedTags": [
+											"bar"
+										]
+									},
+									{
+										"label": "Price type",
+										"inputType": "number",
+										"multiple": false,
+										"value": 380355298,
+										"interestedTags": [
+											"priceType"
+										]
+									}
+								],
+								"uniqueId": 5092657833,
+								"tags": [
+									"price"
+								]
+							},
+							{
+								"symbolName": "Symbol",
+								"label": "Get current symbol",
+								"type": "function",
+								"outputType": "text",
+								"uniqueId": 8661930750,
+								"tags": [
+									"symbol"
+								]
+							},
+							{
+								"symbolName": "Period",
+								"label": "Get current period",
+								"type": "function",
+								"outputType": "number",
+								"uniqueId": 8053308077,
+								"tags": [
+									"period"
+								]
+							},
+							{
+								"symbolName": "currentNumberVar",
+								"label": "Current bar",
+								"type": "variable",
+								"outputType": "number",
+								"uniqueId": 9948875831,
+								"tags": [
+									"memory"
+								]
+							},
+							{
+								"symbolName": "PRICE_CLOSE",
+								"label": "Close price type",
+								"type": "constant",
+								"outputType": "number",
+								"uniqueId": 380355298,
+								"tags": [
+									"priceType"
+								]
+							},
+							{
+								"symbolName": "getMA",
+								"label": "Moving Average value",
+								"type": "function",
+								"outputType": "number",
+								"inputs": [
+									{
+										"label": "Symbol",
+										"inputType": "text",
+										"multiple": false,
+										"value": 4955005918,
+										"interestedTags": [
+											"symbol"
+										]
+									},
+									{
+										"label": "Chart Period",
+										"inputType": "number",
+										"multiple": false,
+										"value": 2668784747,
+										"interestedTags": [
+											"period"
+										]
+									},
+									{
+										"label": "Average Period",
+										"inputType": "number",
+										"multiple": false,
+										"value": 1657607695,
+										"interestedTags": [
+											"freeNumber"
+										]
+									},
+									{
+										"label": "Deviation from Average",
+										"inputType": "number",
+										"multiple": false,
+										"value": 9916808515,
+										"interestedTags": [
+											"freeNumber"
+										]
+									},
+									{
+										"label": "Average type",
+										"inputType": "number",
+										"multiple": false,
+										"value": 6933238694,
+										"interestedTags": [
+											"maModeType"
+										]
+									},
+									{
+										"label": "Price type",
+										"inputType": "number",
+										"multiple": false,
+										"value": 2095740920,
+										"interestedTags": [
+											"priceType"
+										]
+									},
+									{
+										"label": "Bar number",
+										"inputType": "number",
+										"multiple": false,
+										"value": 2577540039,
+										"interestedTags": [
+											"bar"
+										]
+									}
+								],
+								"uniqueId": 3087439234,
+								"tags": [
+									"indicator"
+								]
+							},
+							{
+								"symbolName": "Symbol",
+								"label": "Get current period",
+								"type": "function",
+								"outputType": "text",
+								"uniqueId": 4955005918,
+								"tags": [
+									"symbol"
+								]
+							},
+							{
+								"symbolName": "Period",
+								"label": "Get current period",
+								"type": "function",
+								"outputType": "number",
+								"uniqueId": 2668784747,
+								"tags": [
+									"period"
+								]
+							},
+							{
+								"symbolName": "PRICE_CLOSE",
+								"label": "Close price type",
+								"type": "constant",
+								"outputType": "number",
+								"uniqueId": 2095740920,
+								"tags": [
+									"priceType"
+								]
+							},
+							{
+								"symbolName": "currentNumberVar",
+								"label": "Current bar",
+								"type": "variable",
+								"outputType": "number",
+								"uniqueId": 2577540039,
+								"tags": [
+									"memory"
+								]
+							},
+							{
+								"symbolName": "string",
+								"type": "raw",
+								"outputType": "number",
+								"editable": true,
+								"editableConfig": {
+									"placeholder": "Insira número..."
+								},
+								"tags": [
+									"freeText",
+									"freeInput"
+								],
+								"uniqueId": 1657607695,
+								"value": "14"
+							},
+							{
+								"symbolName": "string",
+								"type": "raw",
+								"outputType": "number",
+								"editable": true,
+								"editableConfig": {
+									"placeholder": "Insira número..."
+								},
+								"tags": [
+									"freeText",
+									"freeInput"
+								],
+								"uniqueId": 9916808515,
+								"value": "0"
+							},
+							{
+								"symbolName": "MODE_SMA",
+								"label": "Simple moving average type",
+								"type": "constant",
+								"outputType": "number",
+								"tags": [
+									"maModeType"
+								],
+								"uniqueId": 6933238694
+							}
+						],
+						"source": null,
+						"label": "Formula to verify",
+						"inputType": "toggle",
+						"isRequired": true,
+						"defaultValue": null,
+						"inputSymbolType": "*",
+						"valueRendered": "(getPrice(Symbol(),Period(),currentNumberVar,PRICE_CLOSE)>getMA(Symbol(),Period(),14,0,MODE_SMA,PRICE_CLOSE,currentNumberVar))"
+					}
+				}
+			},
+			"1530695182349": {
+				"top": 20,
+				"left": 680,
+				"hiddenConfiguration": false,
+				"properties": {
+					"title": "Arrow up",
+					"inputs": {
+						"parent": {
+							"label": "Create..."
+						}
+					},
+					"outputs": {
+						"next": {
+							"label": "After"
+						}
+					}
+				},
+				"internalCategory": "mechanisms",
+				"internalType": "ArrowUp",
+				"parameters": {
+					"id": {
+						"type": null,
+						"value": null,
+						"source": null,
+						"label": "Unique Identifier",
+						"inputType": "text",
+						"isRequired": false,
+						"defaultValue": "\"ArrowCreated\" + Bars(Symbol(), Period())",
+						"inputSymbolType": "*"
+					},
+					"bar": {
+						"type": null,
+						"value": [
+							{
+								"symbolName": "ZERO_CONSTANT",
+								"label": "Current bar number",
+								"type": "constant",
+								"outputType": "number",
+								"firstNode": true,
+								"uniqueId": 7761605639
+							}
+						],
+						"source": null,
+						"label": "Bar",
+						"inputType": "number",
+						"isRequired": true,
+						"defaultValue": null,
+						"inputSymbolType": "*",
+						"valueRendered": "ZERO_CONSTANT"
+					}
+				}
+			},
+			"1530695194189": {
+				"top": 220,
+				"left": 680,
+				"hiddenConfiguration": false,
+				"properties": {
+					"title": "Arrow down",
+					"inputs": {
+						"parent": {
+							"label": "Create..."
+						}
+					},
+					"outputs": {
+						"next": {
+							"label": "After"
+						}
+					}
+				},
+				"internalCategory": "mechanisms",
+				"internalType": "ArrowDown",
+				"parameters": {
+					"id": {
+						"type": null,
+						"value": null,
+						"source": null,
+						"label": "Unique Identifier",
+						"inputType": "text",
+						"isRequired": false,
+						"defaultValue": "\"ArrowCreated\" + Bars(Symbol(), Period())",
+						"inputSymbolType": "*"
+					},
+					"bar": {
+						"type": null,
+						"value": [
+							{
+								"symbolName": "ZERO_CONSTANT",
+								"label": "Current bar number",
+								"type": "constant",
+								"outputType": "number",
+								"firstNode": true,
+								"uniqueId": 3104425686
+							}
+						],
+						"source": null,
+						"label": "Bar",
+						"inputType": "number",
+						"isRequired": true,
+						"defaultValue": null,
+						"inputSymbolType": "*",
+						"valueRendered": "ZERO_CONSTANT"
+					}
+				}
+			}
+		},
+		"links": {
+			"0": {
+				"fromOperator": "1525868398043",
+				"fromConnector": "outs",
+				"fromSubConnector": 0,
+				"toOperator": "1525868406424",
+				"toConnector": "parent",
+				"toSubConnector": 0
+			},
+			"2": {
+				"fromOperator": "1525868406424",
+				"fromConnector": "yes",
+				"fromSubConnector": 0,
+				"toOperator": 1530695182349,
+				"toConnector": "parent",
+				"toSubConnector": 0
+			},
+			"5": {
+				"fromOperator": "1525868406424",
+				"fromConnector": "no",
+				"fromSubConnector": 0,
+				"toOperator": 1530695194189,
+				"toConnector": "parent",
+				"toSubConnector": 0
+			}
+		},
+		"operatorTypes": {
+			
+		}
+	},
+	"memories": [
+		{
+			"name": "Barra atual",
+			"type": "number",
+			"isConfiguration": false,
+			"exists": true,
+			"uniqueName": "currentNumberVar"
+		}
+	]
+}

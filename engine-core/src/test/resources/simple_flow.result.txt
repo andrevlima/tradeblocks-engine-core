@@ -1,0 +1,1 @@
+voidOnTick(){if((getPrice(Symbol(),Period(),currentNumberVar,PRICE_CLOSE)>getMA(Symbol(),Period(),14,0,MODE_SMA,PRICE_CLOSE,currentNumberVar))){ArrowUp();}else{ArrowDown();}}
