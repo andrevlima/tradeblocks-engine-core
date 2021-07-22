@@ -19,6 +19,8 @@ This repository contains the core code (Engine Core) which works like a "library
 
 ![Platform Example on Editor Flow](misc/Current.jpg)
 
+__Quick Note:__ Currently FrontEnd and BackEnd is made on PHP using CodeIgniter and the core part (engine-core) is already migrated to Java, now the PHP application is calling a web service provided by engine-server.
+
 The "Engine Core" runs in "Engine Server" which is basically a Spring Boot server providing the core as a web service.
 
 We can see it working by running the test class `ComposerTest` which uses `simple_flow.json` as input file (The same data that comes from the FrontEnd).
@@ -42,9 +44,5 @@ Workflow should look like:
 If we go to "Setup of Parameters":
 ![Setup of Parameters](misc/ParametersSetupOverview.png)
 Design formula would jump to "Formula Designer"
-
-#### Current Status:
-The application will be fully migrated to Java/Spring, currently the application web (UI/DB) part is made on PHP
-using CodeIgniter and the core part (engine-core) is already migrated to Java, now the PHP application is calling a web service provided by engine-server.
 
 
