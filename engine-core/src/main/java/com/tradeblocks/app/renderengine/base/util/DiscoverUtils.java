@@ -6,8 +6,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
-import com.tradeblocks.app.renderengine.base.annotations.BlockStartPoint;
-import com.tradeblocks.app.renderengine.base.annotations.CompatibleWith;
+
+import com.tradeblocks.app.renderengine.base.annotations.Block;
 import com.tradeblocks.app.renderengine.base.annotations.Engine;
 import com.tradeblocks.app.renderengine.base.block.AbstractBlock;
 import com.tradeblocks.app.renderengine.base.engine.AbstractEngine;
@@ -38,7 +38,7 @@ public class DiscoverUtils {
   private static final List<Class<AbstractBlock>> blocks =
           fullResult.getSubclasses(AbstractBlock.class.getName()).stream()
             .map(block -> (Class<AbstractBlock>) block.loadClass())
-            .filter(block -> block.isAnnotationPresent(CompatibleWith.class))
+            .filter(block -> block.isAnnotationPresent(Block.class))
             .collect(Collectors.toList());
 
   private static Map<String, Map<String, Class<AbstractBlock>>> resultsIndexedByEngine = new HashMap<>();
@@ -57,7 +57,7 @@ public class DiscoverUtils {
         }));
 
   /**
-   * Blocks annotated with {@link BlockStartPoint}
+   * Blocks annotated with {@link Block#isStaringPoint()} and is starting point
    */
   private static final Set<Class<?>> startBlocks = new HashSet<>();
 
@@ -66,16 +66,17 @@ public class DiscoverUtils {
    */
   public static void loadAllBlocksByEngine() {
     getBlocks().stream().forEach((block) -> {
-      String[] engineNames = block.getAnnotation(CompatibleWith.class).value();
+      Block blockAnnotation = block.getAnnotation(Block.class);
+      String[] engineNames = blockAnnotation.compatibleWith();
 
-      if(block.isAnnotationPresent(BlockStartPoint.class)) {
+      if(blockAnnotation.isStaringPoint()) {
         getStartblocks().add(block);
       }
 
       /* // Parallel Stream Approach
       for(String engineName : engineNames) {
-        Map<String, Class<AbstractBlock>> value = getBlocks().parallelStream().collect(Collectors.toMap(Class::getSimpleName, Function.identity()));
-        resultsIndexedByEngine.put(engineName, value);
+        Map<String, Class<AbstractBlock>> compatibleWith = getBlocks().parallelStream().collect(Collectors.toMap(Class::getSimpleName, Function.identity()));
+        resultsIndexedByEngine.put(engineName, compatibleWith);
       }
       */
 

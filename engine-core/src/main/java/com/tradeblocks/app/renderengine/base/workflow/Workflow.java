@@ -7,6 +7,9 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+/**
+ * Represents a Workflow which contains blocks and links between them
+ */
 public class Workflow {
   private List<AbstractBlock> blocks = new ArrayList<>();
   private Set<AbstractBlock> startPoints = new HashSet<>();

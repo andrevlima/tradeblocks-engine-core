@@ -1,15 +1,15 @@
-package com.tradeblocks.app.renderengine.implementation.mql5;
+package com.tradeblocks.app.renderengine.implementation.mql5.blocks;
 
 import com.tradeblocks.app.renderengine.base.block.AbstractRenderableBlock;
 import com.tradeblocks.app.renderengine.base.connector.BlockConnector;
-import com.tradeblocks.app.renderengine.base.parameter.BlockParameterPlain;
+import com.tradeblocks.app.renderengine.base.block.parameter.BlockParameterPlain;
 import com.tradeblocks.app.renderengine.base.annotations.*;
-import com.tradeblocks.app.renderengine.base.parameter.InputType;
-import com.tradeblocks.app.renderengine.base.parameter.SymbolType;
+import com.tradeblocks.app.renderengine.base.block.parameter.InputType;
+import com.tradeblocks.app.renderengine.base.block.parameter.SymbolType;
 import lombok.Getter;
 import lombok.Setter;
 
-@CompatibleWith("mql5")
+@Block(compatibleWith = "mql5")
 public class ForLoop extends AbstractRenderableBlock {
 
     @Parameter(label = "startForLoopLbl", inputType = InputType.NUMBER) @Getter @Setter

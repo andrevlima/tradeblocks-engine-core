@@ -1,7 +1,12 @@
-package com.tradeblocks.app.renderengine.base.parameter;
+package com.tradeblocks.app.renderengine.base.block.parameter;
 
-import com.tradeblocks.app.renderengine.base.parameter.Resolvable;
-
+/**
+ * Represents a Parameter of a Block {@link com.tradeblocks.app.renderengine.base.block.Block} which
+ * should be resolved
+ *
+ * @param <T> type of input data of parameter
+ * @param <R> type of result after resolving parameter
+ */
 public abstract class BlockParameter<T, R> implements Resolvable<R> {
   private String name = null;
   private T value = null;
@@ -25,14 +30,14 @@ public abstract class BlockParameter<T, R> implements Resolvable<R> {
   }
 
   /**
-   * @return the value
+   * @return the compatibleWith
    */
   public T getValue() {
     return value;
   }
 
   /**
-   * @param value the value to set
+   * @param value the compatibleWith to set
    */
   public void setValue(T value) {
     this.value = value;

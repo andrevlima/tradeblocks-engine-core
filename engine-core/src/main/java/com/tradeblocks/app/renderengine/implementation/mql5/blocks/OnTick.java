@@ -1,18 +1,16 @@
-package com.tradeblocks.app.renderengine.implementation.mql5;
+package com.tradeblocks.app.renderengine.implementation.mql5.blocks;
 
 import java.util.List;
 
 import com.tradeblocks.app.renderengine.base.block.AbstractRenderableBlock;
 import com.tradeblocks.app.renderengine.base.connector.BlockConnector;
-import com.tradeblocks.app.renderengine.base.annotations.BlockStartPoint;
-import com.tradeblocks.app.renderengine.base.annotations.CompatibleWith;
+import com.tradeblocks.app.renderengine.base.annotations.Block;
 import com.tradeblocks.app.renderengine.base.annotations.Connector;
 
 import lombok.Getter;
 import lombok.Setter;
 
-@BlockStartPoint
-@CompatibleWith("mql5")
+@Block(compatibleWith = "mql5", isStaringPoint = true)
 public class OnTick extends AbstractRenderableBlock {
 
   @Connector(value = "outs", multiple = true) @Getter @Setter

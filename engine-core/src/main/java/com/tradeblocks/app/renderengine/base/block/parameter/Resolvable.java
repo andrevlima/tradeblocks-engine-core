@@ -1,4 +1,4 @@
-package com.tradeblocks.app.renderengine.base.parameter;
+package com.tradeblocks.app.renderengine.base.block.parameter;
 
 /**
  * Represents something that can be resolved

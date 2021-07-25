@@ -1,14 +1,24 @@
 package com.tradeblocks.app.renderengine.base.connector;
 
 import com.tradeblocks.app.renderengine.base.block.AbstractBlock;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * Represents the connection between 2 or more {@code Block} instances
+ *
+ * @see com.tradeblocks.app.renderengine.base.block.Block
+ * */
 public class BlockConnector {
+  @Getter @Setter
   private String label;
+  @Getter @Setter
   private AbstractBlock origin;
+  @Getter @Setter
   private List<AbstractBlock> destinations = new ArrayList<>();
   
   public BlockConnector(AbstractBlock origin) {
@@ -19,14 +29,6 @@ public class BlockConnector {
     this.setLabel(label);
     this.setOrigin(origin);
     this.setDestination(destination);
-  }
-
-  public String getLabel() {
-    return label;
-  }
-
-  public void setLabel(String label) {
-    this.label = label;
   }
 
   public AbstractBlock getDestination() {
@@ -47,22 +49,6 @@ public class BlockConnector {
     
   }
 
-  public AbstractBlock getOrigin() {
-    return origin;
-  }
-
-  public void setOrigin(AbstractBlock origin) {
-    this.origin = origin;
-  }
-
-  public List<AbstractBlock> getDestinations() {
-    return destinations;
-  }
-
-  public void setDestinations(List<AbstractBlock> destinations) {
-    this.destinations = destinations;
-  }
-  
   public AbstractBlock get() {
     return getDestination();
   }

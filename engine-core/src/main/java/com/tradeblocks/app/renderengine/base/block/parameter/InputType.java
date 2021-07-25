@@ -1,4 +1,4 @@
-package com.tradeblocks.app.renderengine.base.parameter;
+package com.tradeblocks.app.renderengine.base.block.parameter;
 
 public enum InputType {
   TEXT("text"),

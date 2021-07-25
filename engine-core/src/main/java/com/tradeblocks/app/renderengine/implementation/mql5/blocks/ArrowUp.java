@@ -1,9 +1,9 @@
-package com.tradeblocks.app.renderengine.implementation.mql5;
+package com.tradeblocks.app.renderengine.implementation.mql5.blocks;
 
 import com.tradeblocks.app.renderengine.base.block.AbstractRenderableBlock;
-import com.tradeblocks.app.renderengine.base.annotations.CompatibleWith;
+import com.tradeblocks.app.renderengine.base.annotations.Block;
 
-@CompatibleWith("mql5")
+@Block(compatibleWith = "mql5")
 public class ArrowUp extends AbstractRenderableBlock {
 
   @Override

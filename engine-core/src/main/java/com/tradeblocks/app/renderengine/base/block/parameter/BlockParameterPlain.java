@@ -1,7 +1,11 @@
-package com.tradeblocks.app.renderengine.base.parameter;
+package com.tradeblocks.app.renderengine.base.block.parameter;
 
-import com.tradeblocks.app.renderengine.base.parameter.BlockParameter;
+import com.tradeblocks.app.renderengine.base.block.parameter.BlockParameter;
 
+/**
+ *  Represents a Parameter which don't need to be resolved
+ *  of a Block {@link com.tradeblocks.app.renderengine.base.block.Block}
+ */
 public class BlockParameterPlain extends BlockParameter<String, String> {
   
   public BlockParameterPlain(String name, String value) {

@@ -89,7 +89,7 @@ public class MetaManager {
   }
 
   /**
-   * Given a block class it retrieves the parameters map where key is the name and value is the field control
+   * Given a block class it retrieves the parameters map where key is the name and compatibleWith is the field control
    *
    * @param targetClass
    * @return map of parameters from a given block
@@ -99,7 +99,7 @@ public class MetaManager {
   }
 
   /**
-   * Given a block class it retrieves the parameters map where key is the name and value is the field control
+   * Given a block class it retrieves the parameters map where key is the name and compatibleWith is the field control
    *
    * @param targetClass
    * @return map of connectors from a given block

@@ -21,12 +21,13 @@ import com.tradeblocks.app.renderengine.base.block.AbstractBlock;
 import com.tradeblocks.app.renderengine.base.connector.BlockConnector;
 import com.tradeblocks.app.renderengine.base.core.FastGetSet;
 import com.tradeblocks.app.renderengine.base.engine.AbstractRenderEngine;
-import com.tradeblocks.app.renderengine.base.parameter.BlockParameterPlain;
+import com.tradeblocks.app.renderengine.base.block.parameter.BlockParameterPlain;
 import com.tradeblocks.app.renderengine.base.util.DiscoverUtils;
 import com.tradeblocks.app.renderengine.base.workflow.Workflow;
 
 /**
- * This works discovering the engine target, preparing a new instance and injecting the workflows ready into this.
+ * Responsible for compose the final result of a Workflow.
+ * This works discovering the engine, injecting data, preparing and linking blocks.
  * @author Andre Vinicius Lima <andrelimamail@gmail.com>
  *
  */
