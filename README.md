@@ -45,4 +45,12 @@ If we go to "Setup of Parameters":
 ![Setup of Parameters](misc/ParametersSetupOverview.png)
 Design formula would jump to "Formula Designer"
 
+### Code 
 
+The code in this plugin is mainly splited between 2 packages (com.tradeblocks.app.renderengine):
+- Package "base" which contains basically the "framework code part", 
+- Package "implementations" where we can find all implementations of the "framework" present on "base" package.
+
+### Dependencies
+
+This project is using Lombok, make sure your IDE has it installed and enabled before trying to edit it.

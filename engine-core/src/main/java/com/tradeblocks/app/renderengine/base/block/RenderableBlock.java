@@ -6,6 +6,6 @@ package com.tradeblocks.app.renderengine.base.block;
  * @author Andre Vinicius Lima <andrelimamail@gmail.com>
  *
  */
-public interface Renderable {
-  public String doRender();
+public interface RenderableBlock {
+  public String render();
 }

@@ -12,19 +12,19 @@ import lombok.Setter;
  * @author Andre Vinicius Lima <andrelimamail@gmail.com>
  *
  */
-public abstract class AbstractRenderableBlock extends AbstractBlock implements Renderable {
+public abstract class AbstractRenderableBlock extends AbstractBlock implements RenderableBlock {
   @Connector("next") @Getter @Setter
   protected BlockConnector next;
 
   @Override
-  public String doRender() {
+  public String render() {
     return TemplateUtils.getRendered(template() + "\n$!{this.next}", this, this.getClass().getSimpleName());
   }
   
   @Override
   @SuppressWarnings("unchecked")
   public String perform() {
-    return doRender();
+    return render();
   }
   
   public abstract String template();

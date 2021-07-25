@@ -1,4 +1,4 @@
-package com.tradeblocks.app.renderengine.mql5.implementation;
+package com.tradeblocks.app.renderengine.implementation.mql5;
 
 import com.tradeblocks.app.renderengine.base.block.AbstractRenderableBlock;
 import com.tradeblocks.app.renderengine.base.annotations.CompatibleWith;

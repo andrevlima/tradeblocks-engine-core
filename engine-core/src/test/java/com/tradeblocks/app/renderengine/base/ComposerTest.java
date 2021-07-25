@@ -9,7 +9,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import org.junit.jupiter.api.Test;
 import com.google.googlejavaformat.java.Formatter;
-import com.tradeblocks.app.renderengine.mql5.implementation.MockEngine;
+import com.tradeblocks.app.renderengine.implementation.mql5.MockEngine;
 
 public class ComposerTest {
 

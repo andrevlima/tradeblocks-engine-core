@@ -4,6 +4,7 @@
 package com.tradeblocks.app.renderengine.base.block;
 
 import com.tradeblocks.app.renderengine.base.block.AbstractBlock;
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 /**
  * Any block that can be ran
@@ -19,7 +20,7 @@ public abstract class AbstractRunnableBlock extends AbstractBlock {
   @Override
   public <T> T perform() {
     // TODO Auto-generated method stub
-    return null;
+    throw new NotImplementedException();
   }
 
 }

@@ -1,10 +1,10 @@
-package com.tradeblocks.app.renderengine.base;
+package com.tradeblocks.app.renderengine.base.block;
 
 /**
  * Any peace that can be ran
  * @author Andre Vinicius Lima <andrelimamail@gmail.com>
  *
  */
-public interface Runnable {
+public interface RunnableBlock {
   public void run();
 }
